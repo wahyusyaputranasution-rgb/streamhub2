@@ -1,0 +1,18 @@
+{
+  "name": "streaming-app",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Website streaming video modern berbasis Cloudflare Pages + Workers + D1",
+  "scripts": {
+    "dev": "wrangler pages dev public --d1=DB --compatibility-flags=nodejs_compat",
+    "deploy": "wrangler pages deploy public",
+    "db:create": "wrangler d1 create streaming_db",
+    "db:migrate:local": "wrangler d1 execute streaming_db --local --file=./database/schema.sql",
+    "db:migrate:remote": "wrangler d1 execute streaming_db --remote --file=./database/schema.sql",
+    "db:seed:local": "wrangler d1 execute streaming_db --local --file=./database/seed.sql",
+    "db:seed:remote": "wrangler d1 execute streaming_db --remote --file=./database/seed.sql"
+  },
+  "devDependencies": {
+    "wrangler": "^3.90.0"
+  }
+}

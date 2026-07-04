@@ -1,0 +1,18 @@
+name = "streaming-app"
+compatibility_date = "2024-09-23"
+compatibility_flags = ["nodejs_compat"]
+pages_build_output_dir = "public"
+
+# D1 Database binding
+# Setelah membuat database dengan:
+#   wrangler d1 create streaming_db
+# salin "database_id" yang muncul ke bawah ini.
+[[d1_databases]]
+binding = "DB"
+database_name = "streaming_db"
+database_id = "REPLACE_WITH_YOUR_DATABASE_ID"
+
+# Environment variables (opsional, bisa juga diatur lewat dashboard Cloudflare Pages)
+[vars]
+SITE_NAME = "StreamHub"
+SITE_URL = "https://your-project.pages.dev"

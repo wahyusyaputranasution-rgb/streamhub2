@@ -10,7 +10,7 @@ pages_build_output_dir = "public"
 [[d1_databases]]
 binding = "DB"
 database_name = "streaming_db"
-database_id = "REPLACE_WITH_YOUR_DATABASE_ID"
+database_id = "5d5d5e0d-094c-4ac1-a837-9f088ce70141"
 
 # Environment variables (opsional, bisa juga diatur lewat dashboard Cloudflare Pages)
 [vars]
